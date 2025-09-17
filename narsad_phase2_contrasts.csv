@@ -1,0 +1,19 @@
+contrast_id,contrast_name,condition1,condition2,weight1,weight2
+1,CS-_first_half_others > FIXATION_first_half,CS-_first_half_others,FIXATION_first_half,1,-1
+2,CSS_first_half > FIXATION_first_half,CSS_first_half,FIXATION_first_half,1,-1
+3,CSR_first_half > FIXATION_first_half,CSR_first_half,FIXATION_first_half,1,-1
+4,CSS_first_half > CSR_first_half,CSS_first_half,CSR_first_half,1,-1
+5,CSR_first_half > CSS_first_half,CSR_first_half,CSS_first_half,1,-1
+6,CSS_first_half > CS-_first_half_others,CSS_first_half,CS-_first_half_others,1,-1
+7,CSR_first_half > CS-_first_half_others,CSR_first_half,CS-_first_half_others,1,-1
+8,CS-_first_half_others > CSS_first_half,CS-_first_half_others,CSS_first_half,1,-1
+9,CS-_first_half_others > CSR_first_half,CS-_first_half_others,CSR_first_half,1,-1
+10,CS-_second_half > FIXATION_second_half,CS-_second_half,FIXATION_second_half,1,-1
+11,CSS_second_half > FIXATION_second_half ,CSS_second_half,FIXATION_second_half,1,-1
+12,CSR_second_half > FIXATION_second_half,CSR_second_half,FIXATION_second_half,1,-1
+13,CSS_second_half > CSR_second_half,CSS_second_half,CSR_second_half,1,-1
+14,CSR_second_half > CSS_second_half,CSR_second_half,CSS_second_half,1,-1
+15,CSS_second_half > CS-_second_half,CSS_second_half,CS-_second_half,1,-1
+16,CSR_second_half > CS-_second_half,CSR_second_half,CS-_second_half,1,-1
+17,CS-_second_half > CSS_second_half,CS-_second_half,CSS_second_half,1,-1
+18,CS-_second_half > CSR_second_half,CS-_second_half,CSR_second_half,1,-1
