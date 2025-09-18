@@ -24,7 +24,7 @@
 # =============================================================================
 
 # Default settings
-#DEFAULT_ACCOUNT="fang"
+DEFAULT_ACCOUNT="fang"
 DEFAULT_PARTITION="ckpt-all"
 #DEFAULT_PARTITION="cpu-g2"
 DEFAULT_CPUS_PER_TASK=4
