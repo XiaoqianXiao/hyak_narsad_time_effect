@@ -287,7 +287,7 @@ def load_behavioral_data(filter_column=None, filter_value=None, include_columns=
         if include_columns:
             # Smart column name mapping for common variations
             column_mapping = {
-                'gender_id': 'gender_id',  # Map gender_id to demo_sex_at_birth for initial data access
+                'gender_id': 'gender_code',  # Map gender_id to demo_sex_at_birth for initial data access
                 'drug_id': 'drug_id',        # Keep drug_id as is
                 'group_id': 'group_id',      # Keep group_id as is
                 'subID': 'subID'             # Keep subID as is
@@ -818,7 +818,7 @@ Examples:
             if args.include_columns:
                 # If include_columns was specified, we need to map back to the actual column names in the data
                 column_mapping = {
-                    'gender_id': 'gender_id',  # Map gender_id to demo_sex_at_birth for initial data access
+                    'gender_id': 'gender_code',  # Map gender_id to demo_sex_at_birth for initial data access
                     'drug_id': 'drug_id',        # Keep drug_id as is
                     'group_id': 'group_id',      # Keep group_id as is
                     'subID': 'subID'             # Keep subID as is
@@ -841,7 +841,7 @@ Examples:
                 # GENDER LEVEL RECODING: Recode gender levels from (0,1) to (1,2) for 2×2 factorial design
                 # This prevents the 6-column design matrix issue (2 groups × 3 genders = 6 columns)
                 logger.info("Recoding gender levels from (0,1) to (1,2) for 2×2 factorial design")
-                task_group_info_df['gender_id'] = task_group_info_df['gender_id'].map({0: 1, 1: 2})
+                task_group_info_df['gender_id'] = task_group_info_df['gender_code'].map({0: 1, 1: 2})
                 logger.info("Gender level recoding complete: 0→1 (Female), 1→2 (Male)")
                 
                 # Update processing_columns to use gender_id instead of demo_sex_at_birth for the final group_info
