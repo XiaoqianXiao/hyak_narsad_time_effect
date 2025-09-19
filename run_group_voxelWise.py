@@ -45,10 +45,11 @@ logger = logging.getLogger(__name__)
 # =============================================================================
 
 # Nipype plugin settings
+n_cpus = int(os.getenv("SLURM_CPUS_PER_TASK", 4))
 PLUGIN_SETTINGS = {
     'plugin': 'MultiProc',
     'plugin_args': {
-        'n_procs': 4,
+        'n_procs': n_cpus,
         'raise_insufficient': False,
         'maxtasksperchild': 1,
     }

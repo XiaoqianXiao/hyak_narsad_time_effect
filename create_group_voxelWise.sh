@@ -27,7 +27,7 @@
 DEFAULT_ACCOUNT="fang"
 DEFAULT_PARTITION="ckpt-all"
 #DEFAULT_PARTITION="cpu-g2"
-DEFAULT_CPUS_PER_TASK=4
+DEFAULT_CPUS_PER_TASK=8
 DEFAULT_MEMORY="16G"
 DEFAULT_TIME="8:00:00"
 DEFAULT_ANALYSIS_TYPES=("randomise" "flameo")
@@ -348,6 +348,10 @@ for task in "${TASKS[@]}"; do
 #SBATCH --time=${TIME}
 #SBATCH --output=${out_path}
 #SBATCH --error=${err_path}
+
+# Set OpenMP threads equal to SLURM CPUs
+export OMP_NUM_THREADS=\$SLURM_CPUS_PER_TASK
+echo "OMP_NUM_THREADS set to \$OMP_NUM_THREADS"
 
 module load apptainer
 apptainer exec -B /gscratch/fang:/data -B /gscratch/scrubbed/fanglab/xiaoqian:/scrubbed_dir -B /gscratch/scrubbed/fanglab/xiaoqian/repo/hyak_narsad_time_effect:/app ${CONTAINER_PATH} \\
